@@ -76,7 +76,7 @@ def trainer(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--epoch', default=500, type=int)
-    parser.add_argument('--cuda', default="1", type=str)
+    parser.add_argument('--cuda', default="0", type=str)
     parser.add_argument('--dataset', default='TDrive', type=str)  # TDrive
     parser.add_argument('--batch_size', default=512, type=int)
     parser.add_argument('--num_workers', default=16, type=int)
