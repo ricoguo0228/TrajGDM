@@ -9,7 +9,7 @@ from models.TrajGeneratorNetwork import TrajGeneratorNetwork
 
 
 def trainer(args):
-    device = torch.device("cuda:" + args.cuda if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda"if torch.cuda.is_available() else "cpu")
     dataloader = load_trajs(dataset=args.dataset, batch_size=args.batch_size, num_workers=args.num_workers)
 
     if args.dataset == 'TDrive':
